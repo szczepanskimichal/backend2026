@@ -1,6 +1,42 @@
-@ToDoApiAndWebClient_HostAddress = http://localhost:7069
+@baseUrl = http://localhost:5001
+### Hent alle todos
 
-GET {{ToDoApiAndWebClient_HostAddress}}/weatherforecast/
+GET {{baseUrl}}/todos
 Accept: application/json
 
-###
+### Hent todo 1
+
+GET {{baseUrl}}/todos/2
+Accept: application/json
+
+### Opprett en todo
+
+POST {{baseUrl}}/todos
+Content-Type: application/json
+    
+{
+    "text": "Ny todo"
+}
+
+### Oppdater en todo
+
+PUT {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+    "text": "Oppdatert todo",
+    "isDone": true
+}
+### Patch en todo
+
+PATCH {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+    "text": "Oppdatert todo",
+    "isDone": true
+}
+
+### Slett en todo
+
+DELETE {{baseUrl}}/todos/1
