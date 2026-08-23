@@ -6,7 +6,7 @@ Accept: application/json
 
 ### Hent todo 1
 
-GET {{baseUrl}}/todos/2
+GET {{baseUrl}}/todos/1
 Accept: application/json
 
 ### Opprett en todo
@@ -15,16 +15,16 @@ POST {{baseUrl}}/todos
 Content-Type: application/json
     
 {
-    "text": "Ny todo"
+    "text": "Ny todo3"
 }
 
 ### Oppdater en todo
 
-PUT {{baseUrl}}/todos/1
+PUT {{baseUrl}}/todos/2
 Content-Type: application/json
 
 {
-    "text": "Oppdatert todo",
+    "text": "Oppdatert todoTest2",
     "isDone": true
 }
 ### Patch en todo
