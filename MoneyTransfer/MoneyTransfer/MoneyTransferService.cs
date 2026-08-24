@@ -1,11 +1,17 @@
 using System.Text.Json;
+using MoneyTransfer.DomainServices;
 using MoneyTransfer.Model;
 
 namespace MoneyTransfer;
 
 public class MoneyTransferService
 {
-    public static void Transfer(
+    private readonly IAccountRepository _accountRepository;
+    public MoneyTransferService(IAccountRepository accountRepository)
+    {
+        _accountRepository = accountRepository;
+    }
+    public void Transfer(
         string fromAccountNumber,
         string toAccountNumber,
         decimal amount)
@@ -22,42 +28,13 @@ public class MoneyTransferService
                 "Fra-konto og til-konto kan ikke være den samme.");
         }
 
-        var fromAccountFilePath =
-            $"accounts/{fromAccountNumber}.json";
-
-        var toAccountFilePath =
-            $"accounts/{toAccountNumber}.json";
+        
 
 
-        if (!File.Exists(fromAccountFilePath))
-        {
-            throw new FileNotFoundException(
-                $"Fant ikke fra-kontoen {fromAccountNumber}.");
-        }
-
-        if (!File.Exists(toAccountFilePath))
-        {
-            throw new FileNotFoundException(
-                $"Fant ikke til-kontoen {toAccountNumber}.");
-        }
-
-
-        var fromAccountJson =
-            File.ReadAllText(fromAccountFilePath);
-
-        var toAccountJson =
-            File.ReadAllText(toAccountFilePath);
-
-
-        var fromAccount =
-            JsonSerializer.Deserialize<Account>(
-                fromAccountJson);
-
-        var toAccount =
-            JsonSerializer.Deserialize<Account>(
-                toAccountJson);
-
-
+       
+        var fromAccount = _accountRepository.Get(fromAccountNumber);
+        var toAccount = _accountRepository.Get(toAccountNumber);
+        
         if (fromAccount == null ||
             toAccount == null)
         {
@@ -75,26 +52,7 @@ public class MoneyTransferService
 
         fromAccount.Balance -= amount;
         toAccount.Balance += amount;
-
-
-        var options =
-            new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
-
-
-        File.WriteAllText(
-            fromAccountFilePath,
-            JsonSerializer.Serialize(
-                fromAccount,
-                options));
-
-
-        File.WriteAllText(
-            toAccountFilePath,
-            JsonSerializer.Serialize(
-                toAccount,
-                options));
+        _accountRepository.CreateOrUpdate(fromAccount);
+        _accountRepository.CreateOrUpdate(toAccount);
     }
 }

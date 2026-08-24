@@ -1,8 +1,12 @@
 ﻿using MoneyTransfer;
+using MoneyTransfer.DomainServices;
+using MoneyTransfer.DomainServices.Infrastructure;
 
 try
 {
-    MoneyTransferService.Transfer(
+    var repo = new FileAccountRepository();
+    var service = new MoneyTransferService(repo);
+        service.Transfer(
         fromAccountNumber: "1001",
         toAccountNumber: "1002",
         amount: 250m);
