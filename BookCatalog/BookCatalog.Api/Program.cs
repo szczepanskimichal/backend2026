@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<
     IBookRepository, 
-    FileBookRepository>();
+    //FileBookRepository>(); // this is
+    SqlBookRepository>();
 
 var app = builder.Build();
 
