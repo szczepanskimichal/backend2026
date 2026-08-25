@@ -16,7 +16,7 @@ public class SqlBookRepository : IBookRepository
                 "Brak connection stringa BookCatalog.");
     }
 
-    public async Task<IEnumerable<Book>> GetAllAsync()
+    public async Task<IEnumerable<Book>> GetAllBooksAsync()
     {
         const string sql = """
                            SELECT Id, 
@@ -31,11 +31,6 @@ public class SqlBookRepository : IBookRepository
             new SqlConnection(_connectionString);
 
         return await connection.QueryAsync<Book>(sql);
-    }
-
-    public Task<IEnumerable<Book>> GetAllBooksAsync()
-    {
-        throw new NotImplementedException();
     }
 
     public async Task<Book?> FindAsync(int id)
