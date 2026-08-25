@@ -1,6 +1,30 @@
-@BookCatalog.Api_HostAddress = http://localhost:5173
+@baseUrl = http://localhost:5173
 
-GET {{BookCatalog.Api_HostAddress}}/weatherforecast/
+### Hent alle bøker
+
+GET {{baseUrl}}/books
 Accept: application/json
 
-###
+
+### Hent bok med id 1
+
+GET {{baseUrl}}/books/1
+Accept: application/json
+
+
+### Bok som ikke finnes
+
+GET {{baseUrl}}/books/999
+Accept: application/json
+
+
+### Finn bøker av Ada
+
+GET {{baseUrl}}/books?author=Ada
+Accept: application/json
+
+
+### Forfatter som ikke finnes
+
+GET {{baseUrl}}/books?author=Nobody
+Accept: application/json
