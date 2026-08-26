@@ -1,8 +1,9 @@
+
 using BookCatalog.Api.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
-namespace BookCatalog.Api.Data;
 
 public class SqlBookRepository : IBookRepository
 {
