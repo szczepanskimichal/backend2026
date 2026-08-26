@@ -72,5 +72,71 @@ public class SqlBookRepository : IBookRepository
             sql,
             new { Author = author });
     }
+
+    public async Task AddAsync(Book book)
+    {
+        const string sql = """
+                           INSERT INTO Books
+                           (
+                               Id,
+                               Title,
+                               Author,
+                               [Year],
+                               IsAvailable
+                           )
+                           VALUES
+                           (
+                               @Id,
+                               @Title,
+                               @Author,
+                               @Year,
+                               @IsAvailable
+                           );
+                           """;
+
+        await using var connection =
+            new SqlConnection(_connectionString);
+
+        await connection.ExecuteAsync(sql, book);
+    }
+
+    public async Task<bool> UpdateAsync(Book book)
+    {
+        const string sql = """
+                           UPDATE Books
+                           SET
+                               Title = @Title,
+                               Author = @Author,
+                               [Year] = @Year,
+                               IsAvailable = @IsAvailable
+                           WHERE Id = @Id;
+                           """;
+
+        await using var connection =
+            new SqlConnection(_connectionString);
+
+        var affectedRows =
+            await connection.ExecuteAsync(sql, book);
+
+        return affectedRows > 0;
+    }
+
+    public async Task<bool> DeleteAsync(int id)
+    {
+        const string sql = """
+                           DELETE FROM Books
+                           WHERE Id = @Id;
+                           """;
+
+        await using var connection =
+            new SqlConnection(_connectionString);
+
+        var affectedRows =
+            await connection.ExecuteAsync(
+                sql,
+                new { Id = id });
+
+        return affectedRows > 0;
+    }
 }
 

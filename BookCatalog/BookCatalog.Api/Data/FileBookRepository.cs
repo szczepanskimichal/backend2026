@@ -41,6 +41,21 @@ public class FileBookRepository : IBookRepository
             .ToList();
     }
 
+    public Task AddAsync(Book book)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> UpdateAsync(Book book)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> DeleteAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
+
     private async Task<List<Book>> LoadBooksAsync()
     {
         if (!File.Exists(_filePath))

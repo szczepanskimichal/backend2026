@@ -35,4 +35,53 @@ app.MapGet("/books/{id:int}", async (int id, IBookRepository repository) =>
     return Results.Ok(book);
 });
 
+app.MapPost(
+    "/books",
+    async (
+        Book book,
+        IBookRepository repository) =>
+    {
+        await repository.AddAsync(book);
+
+        return Results.Created(
+            $"/books/{book.Id}",
+            book);
+    });
+
+app.MapPut(
+    "/books/{id:int}",
+    async (
+        int id,
+        Book book,
+        IBookRepository repository) =>
+    {
+        book.Id = id;
+
+        var updated =
+            await repository.UpdateAsync(book);
+
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        return Results.NoContent();
+    });
+
+app.MapDelete(
+    "/books/{id:int}",
+    async (
+        int id,
+        IBookRepository repository) =>
+    {
+        var deleted =
+            await repository.DeleteAsync(id);
+
+        if (!deleted)
+        {
+            return Results.NotFound();
+        }
+
+        return Results.NoContent();
+    });
 app.Run();
