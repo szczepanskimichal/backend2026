@@ -1,4 +1,4 @@
-namespace BookCatalog.Api.Models;
+namespace Domain.Entities;
 
 public class Book
 {
