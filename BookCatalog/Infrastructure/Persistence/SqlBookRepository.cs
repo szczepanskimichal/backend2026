@@ -1,9 +1,10 @@
-
-using BookCatalog.Api.Models;
+using Application.Abstractions;
+using Domain.Entities;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
+namespace Infrastructure.Persistence;
 
 public class SqlBookRepository : IBookRepository
 {
@@ -140,4 +141,3 @@ public class SqlBookRepository : IBookRepository
         return affectedRows > 0;
     }
 }
-

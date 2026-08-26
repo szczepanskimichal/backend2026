@@ -1,4 +1,6 @@
-namespace BookCatalog.Api.Models;
+using Domain.Entities;
+
+namespace Application.Abstractions;
 
 public interface IBookRepository
 {
