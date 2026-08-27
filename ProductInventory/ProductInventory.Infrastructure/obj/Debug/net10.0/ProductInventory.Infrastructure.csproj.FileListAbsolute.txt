@@ -1,0 +1,16 @@
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.csproj.AssemblyReference.cache
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.AssemblyInfoInputs.cache
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.AssemblyInfo.cs
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.sourcelink.json
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/bin/Debug/net10.0/ProductInventory.Infrastructure.deps.json
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/bin/Debug/net10.0/ProductInventory.Infrastructure.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/bin/Debug/net10.0/ProductInventory.Infrastructure.pdb
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/bin/Debug/net10.0/ProductInventory.Core.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/bin/Debug/net10.0/ProductInventory.Core.pdb
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductI.D8457FEE.Up2Date
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/refint/ProductInventory.Infrastructure.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ProductInventory.Infrastructure.pdb
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Infrastructure/obj/Debug/net10.0/ref/ProductInventory.Infrastructure.dll

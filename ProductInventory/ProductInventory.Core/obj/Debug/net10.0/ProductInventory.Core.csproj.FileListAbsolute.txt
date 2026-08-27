@@ -1,0 +1,12 @@
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/bin/Debug/net10.0/ProductInventory.Core.deps.json
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/bin/Debug/net10.0/ProductInventory.Core.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/bin/Debug/net10.0/ProductInventory.Core.pdb
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.AssemblyInfoInputs.cache
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.AssemblyInfo.cs
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.csproj.CoreCompileInputs.cache
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.sourcelink.json
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/refint/ProductInventory.Core.dll
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ProductInventory.Core.pdb
+/Users/michalszczepanski/RiderProjects/Backend light/ProductInventory/ProductInventory.Core/obj/Debug/net10.0/ref/ProductInventory.Core.dll

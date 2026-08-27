@@ -1,0 +1,38 @@
+@HostAddress = https://localhost:7042
+
+GET {{HostAddress}}/products
+Accept: application/json
+
+###
+GET {{HostAddress}}/products/9
+Accept: application/json
+
+###
+POST {{HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Webcam",
+  "productCode": "WEBCAM-01",
+  "stockCount": 101
+}
+###
+POST {{HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Test Product",
+  "productCode": "TEST-01",
+  "stockCount": 101
+}
+###
+PUT {{HostAddress}}/products/9
+Content-Type: application/json
+{
+  "id": 9,
+  "name": "Webcam Updated",
+  "productCode": "WEBCAM-01",
+  "stockCount": 150
+}
+###
+DELETE {{HostAddress}}/products/12
